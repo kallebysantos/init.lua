@@ -1,6 +1,10 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero').preset({
+    manage_nvim_cmp = {
+        set_sources = 'recommended'
+    }
+})
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
