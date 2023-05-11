@@ -21,6 +21,11 @@ return require('packer').startup(function(use)
 
     use('theprimeagen/harpoon')
 
+    use('theprimeagen/vim-be-good')
+
+    use('vim-airline/vim-airline')
+    use('vim-airline/vim-airline-themes')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -28,7 +33,7 @@ return require('packer').startup(function(use)
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
             {
-                              -- Optional
+                -- Optional
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
@@ -37,9 +42,9 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
 end)
