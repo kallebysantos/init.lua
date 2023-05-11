@@ -24,7 +24,10 @@ return require('packer').startup(function(use)
     use('theprimeagen/vim-be-good')
 
     use('vim-airline/vim-airline')
+
     use('vim-airline/vim-airline-themes')
+
+    use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
     use {
         'VonHeikemen/lsp-zero.nvim',
