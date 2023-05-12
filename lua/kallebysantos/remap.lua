@@ -17,3 +17,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
 -- save file
 vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- quit
+vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
