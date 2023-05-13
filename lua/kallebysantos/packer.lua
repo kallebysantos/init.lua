@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-fugitive')
 
+    -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -57,5 +58,9 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
         }
+    }
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
     }
 end)
