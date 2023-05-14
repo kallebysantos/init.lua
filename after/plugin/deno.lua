@@ -1,0 +1,1 @@
+require("deno-nvim").setup()

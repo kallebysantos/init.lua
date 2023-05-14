@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-web-devicons'
 
+    use 'brenoprata10/nvim-highlight-colors'
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
@@ -63,4 +65,10 @@ return require('packer').startup(function(use)
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
     }
+
+    use 'neovim/nvim-lspconfig'
+    use 'sigmasd/deno-nvim'
+
+    -- Debugging
+    use 'mfussenegger/nvim-dap'
 end)

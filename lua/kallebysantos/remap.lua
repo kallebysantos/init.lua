@@ -10,10 +10,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Window Navigation
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+--vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+--vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+--vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+--vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
 -- save file
 vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
