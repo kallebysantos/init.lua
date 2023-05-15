@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--  This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -15,12 +15,31 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-web-devicons'
 
-    use 'brenoprata10/nvim-highlight-colors'
+    use {
+        "themaxmarchuk/tailwindcss-colors.nvim",
+        -- load only on require("tailwindcss-colors")
+        module = "tailwindcss-colors",
+        -- run the setup function after plugin is loaded
+        config = function()
+            -- pass config options here (or nothing to use defaults)
+            require("tailwindcss-colors").setup()
+        end
+    }
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+
+    use {
+        'rmagatti/auto-session',
+        config = function()
+            require("auto-session").setup {
+                log_level = "error",
+                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+            }
+        end
     }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -29,9 +48,10 @@ return require('packer').startup(function(use)
 
     use('theprimeagen/vim-be-good')
 
-    use('vim-airline/vim-airline')
-
-    use('vim-airline/vim-airline-themes')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
