@@ -1,4 +1,5 @@
 return {
+  --[[
   {
     "vhyrro/luarocks.nvim",
     priority = 1000,
@@ -19,4 +20,5 @@ return {
       { "<leader>rr", "<cmd>Rest run<cr>", desc = "Run REST request" },
     },
   },
+--]]
 }
