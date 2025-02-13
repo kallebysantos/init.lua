@@ -7,7 +7,6 @@ return {
       highlight_overrides = {
         all = function(colors)
           return {
-            Comment = { fg = colors.crust },
             TabLineSel = { bg = colors.pink },
             CmpBorder = { fg = colors.surface2 },
             Pmenu = { bg = colors.none },
