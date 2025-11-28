@@ -4,3 +4,4 @@
 
 vim.cmd("set t_ZH=^[[3m")
 vim.cmd("set t_ZR=^[[23m")
+vim.opt.clipboard = "unnamedplus"

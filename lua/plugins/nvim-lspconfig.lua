@@ -11,9 +11,9 @@ return {
         single_file_support = false,
       },
       vtsls = {
+        enabled = true,
         root_dir = require("lspconfig").util.root_pattern("package.json"),
         single_file_support = false,
-        enabled = true,
       },
       -- PostgreSQL
       postgres_lsp = {
