@@ -15,6 +15,7 @@ return {
           experimental = {
             classRegex = {
               -- Matches: Tw("flex", "text-2xl") and @Tw("flex", "text-2xl")
+              "Tw\\(([^)]*)\\)",
               { "\\Tw\\s+\\[([\\s\\S]*)\\]", '["\\:]([^\\s"]*)["]?' },
               { "\\@Tw\\s+\\[([\\s\\S]*)\\]", '["\\:]([^\\s"]*)["]?' },
             },
